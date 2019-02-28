@@ -1,0 +1,83 @@
+//SignUp form
+.signUp_page{
+ margin: 0 auto;
+ width: 50%;
+ h1{
+   text-transform: capitalize;
+   font-size: 1.3rem;
+   text-align: center;
+   margin-bottom: 20px;
+ }
+.signUp-form {
+  background: rgb(230, 194, 194);
+  border-radius: 3px;
+  padding: 40px;
+  margin: 0 auto;
+  width: 50%;
+  margin-top:3rem;;
+  .use-name{
+    // margin: 0 auto;
+    width:18rem;
+    padding: 10px 0;
+    outline: none;
+  }
+   .email-input{
+    outline: none;
+    width:18rem;
+     display: block;
+     padding: 10px 0;
+     margin: 20px 0;
+   }
+   .password-input{
+    padding: 10px 0;
+    width:18rem;
+    outline: none;
+
+   }
+   .submit-btn {
+    padding: 10px 25px;
+    margin-top: 20px;
+    outline: none;
+    background-color: rgb(236, 167, 167);
+    border: 1px solid rgb(224, 185, 185); 
+   }
+}
+}
+//-form-login
+.login_page{
+  margin: 0 auto;
+  width: 50%;
+  h1{
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+ .signUp-form {
+   background: rgb(230, 194, 194);
+   border-radius: 3px;
+   padding: 40px;
+   margin: 0 auto;
+   width: 50%;
+   margin-top:3rem;;
+   .use-name{
+     // margin: 0 auto;
+     width:18rem;
+     padding: 10px 0;
+     outline: none;
+   }
+    .password-input{
+     padding: 10px 0;
+     width:18rem;
+     outline: none;
+    margin-top: 20px;
+    }
+    .submit-btn {
+     padding: 10px 25px;
+     margin-top: 20px;
+     outline: none;
+     background-color: rgb(236, 167, 167);
+     border: 1px solid rgb(224, 185, 185); 
+    }
+ }
+ }
