@@ -70,17 +70,37 @@ export function userSignup(data) {
   };
 }
 
-export function login(data, cb) {
-  console.log(data);
+export const login = (data, cb) => dispatch => {
+  fetch(`${url}/login`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data, 'inside action login');
+      dispatch({type: 'LOGIN_SUCCESS', data});
+      cb(true);
+    });
+};
+
+export const getUserData = () => dispatch => {
+  fetch(`${url}/isLoggedIn`)
+    .then(res => res.json())
+    .then(data => {
+      dispatch({type: 'LOGIN_SUCCESS', data});
+    });
+};
+
+export function logoutUser(cb) {
   return dispatch => {
-    fetch(`${url}/login`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
+    fetch('/api/logout')
       .then(res => res.json())
-      .then(data => console.log(data));
+      .then(data => {
+        dispatch({type: 'LOGOUT_SUCCESS', data});
+        cb(true);
+      });
   };
 }

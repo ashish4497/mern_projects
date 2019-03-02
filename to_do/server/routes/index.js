@@ -1,27 +1,36 @@
 const express = require('express');
 const router = express.Router();
 const todoController = require('../controllers/todo.controller');
+const User = require('../models/user');
 
-router.get('/', (req, res) => {
+//middleware
+var isLoginIn = (req, res, next) => {
+  if (req.user) {
+    next();
+  } else {
+    res.redirect('/login');
+  }
+};
+
+router.get('/', isLoginIn, (req, res) => {
   res.render('index');
 });
 
-router.get('/todos', (req, res) => {
+router.get('/todos', isLoginIn, (req, res) => {
   res.render('index');
 });
 
-router.get('/todos/:id', (req, res) => {
-  console.log('object');
+router.get('/todos/:id', isLoginIn, (req, res) => {
   res.render('index');
 });
 router.get('/signup', (req, res) => {
-  console.log('object');
   res.render('index');
 });
 router.get('/login', (req, res) => {
   res.render('index');
 });
-//addtodo
+
+//addTodo
 router.post('/api/todo', todoController.addTodo);
 
 //get all data in todo
@@ -38,5 +47,11 @@ router.post('/api/signup', todoController.signUp);
 
 //login form
 router.post('/api/login', todoController.login);
+
+//logout
+router.get('/api/logout', todoController.logout);
+
+//isLoggedIn
+router.get('/api/isLoggedIn', todoController.isLoggedIn);
 
 module.exports = router;

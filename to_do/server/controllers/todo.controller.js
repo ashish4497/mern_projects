@@ -52,9 +52,9 @@ module.exports = {
   },
 
   login: (req, res, next) => {
-    console.log(req.body, 'todoController passport');
+    // console.log(req.body, 'todoController passport');
     passport.authenticate('local', function(err, user, info) {
-      console.log(user, '=================');
+      // console.log(user, '=================');
       if (err) {
         return next(err);
       }
@@ -72,5 +72,19 @@ module.exports = {
         });
       });
     })(req, res, next);
+  },
+  logout: (req, res) => {
+    console.log('log out');
+    req.session.destroy();
+    return res.status(200).json({
+      msg: 'success'
+    });
+  },
+  isLoggedIn: (req, res) => {
+    User.findOne({_id: req.user}, (err, user) => {
+      return res.json({
+        user
+      });
+    });
   }
 };

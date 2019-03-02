@@ -14,7 +14,6 @@ module.exports = function(passport) {
 
   passport.use(
     new Local(function(username, password, done) {
-      console.log(username, 'check2');
       User.findOne({username: username}, function(err, user) {
         if (err) {
           return done(err);

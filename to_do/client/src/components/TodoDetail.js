@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { oneTodo } from '../action/action';
-import { Link } from 'react-router-dom';
+import React, {Component, Fragment} from 'react';
+import {connect} from 'react-redux';
+import {oneTodo} from '../action/action';
+import {Link} from 'react-router-dom';
+import Header from './Header';
 
 class TodoDetail extends Component {
   componentDidMount = () => {
@@ -10,18 +11,21 @@ class TodoDetail extends Component {
   };
 
   render() {
-    const { onetodo } = this.props;
+    const {onetodo} = this.props;
     return (
-      <div className="detail-section">
-        <Link to="/">
-          <i class="fas fa-home" />
-        </Link>
-        <Link to="/todos">
-          <i class="fas fa-arrow-circle-left" />
-        </Link>
-        <div className="detail-page">
-          <h1>{onetodo.title}</h1>
-          <p>{onetodo.description}</p>
+      <div className="description-section">
+        <Header />
+        <div className="detail-section">
+          {/* <Link to="/">
+            <i class="fas fa-home" />
+          </Link> */}
+          <Link to="/todos">
+            <i className="fas fa-arrow-circle-left" />
+          </Link>
+          <div className="detail-page">
+            <h1>{onetodo.title}</h1>
+            <p>{onetodo.description}</p>
+          </div>
         </div>
       </div>
     );

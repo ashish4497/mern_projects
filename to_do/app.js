@@ -54,7 +54,7 @@ if (process.env.NODE_ENV === 'development') {
 app.use(cors());
 require('./server/modules/passport')(passport);
 
-// app.use("/api", require("./server/routes/api"));
+// app.use('/api', require('./server/routes/api'));
 app.use(require('./server/routes/index'));
 
 app.listen(port, () => {

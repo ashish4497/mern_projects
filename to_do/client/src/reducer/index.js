@@ -20,12 +20,17 @@ export default function rootReducer(state = initialState, action) {
       };
     }
     case 'LOGIN_SUCCESS': {
-      // console.log(action.data)
+      console.log(action.data.user, 'inside reducer');
       return {
         ...state,
-        user: action.data
+        user: action.data.user
       };
     }
+    case 'LOGOUT_SUCCESS':
+      return {
+        ...state,
+        user: []
+      };
     default:
       return state;
   }

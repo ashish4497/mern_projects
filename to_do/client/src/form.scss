@@ -1,3 +1,30 @@
+//header
+.top-header{
+  background-color: crimson;
+  display: flex;
+  padding: 15px 40px;
+  justify-content:space-between;
+  .right-icon {
+    display: flex;
+    justify-content: space-between;
+  }
+  p{
+    margin: 0 15px;
+    font-size: 1.1rem;
+    color: whitesmoke;
+    font-weight:500;
+    text-transform:capitalize;
+  }
+  a{
+    text-decoration: none;
+  }
+  .fa-clipboard-list{
+    color:whitesmoke;
+    font-size: 1.7rem;
+  }
+}
+
+
 //SignUp form
 .signUp_page{
  margin: 0 auto;
@@ -78,6 +105,14 @@
      outline: none;
      background-color: rgb(236, 167, 167);
      border: 1px solid rgb(224, 185, 185); 
+    }
+    .register-user {
+      text-align: right;
+      font-size: 1.1rem;
+      &:hover {
+        color: rgb(92, 88, 82);
+        cursor: pointer;
+      }
     }
  }
  }

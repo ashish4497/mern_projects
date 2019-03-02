@@ -1,5 +1,129 @@
+.top-header {
+  background-color: crimson;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.top-header .right-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.top-header p {
+  margin: 0 15px;
+  font-size: 1.1rem;
+  color: whitesmoke;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.top-header a {
+  text-decoration: none;
+}
+
+.top-header .fa-clipboard-list {
+  color: whitesmoke;
+  font-size: 1.7rem;
+}
+
 .signUp_page {
-  background-color: red;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.signUp_page h1 {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signUp_page .signUp-form {
+  background: #e6c2c2;
+  border-radius: 3px;
+  padding: 40px;
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 3rem;
+}
+
+.signUp_page .signUp-form .use-name {
+  width: 18rem;
+  padding: 10px 0;
+  outline: none;
+}
+
+.signUp_page .signUp-form .email-input {
+  outline: none;
+  width: 18rem;
+  display: block;
+  padding: 10px 0;
+  margin: 20px 0;
+}
+
+.signUp_page .signUp-form .password-input {
+  padding: 10px 0;
+  width: 18rem;
+  outline: none;
+}
+
+.signUp_page .signUp-form .submit-btn {
+  padding: 10px 25px;
+  margin-top: 20px;
+  outline: none;
+  background-color: #eca7a7;
+  border: 1px solid #e0b9b9;
+}
+
+.login_page {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.login_page h1 {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login_page .signUp-form {
+  background: #e6c2c2;
+  border-radius: 3px;
+  padding: 40px;
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 3rem;
+}
+
+.login_page .signUp-form .use-name {
+  width: 18rem;
+  padding: 10px 0;
+  outline: none;
+}
+
+.login_page .signUp-form .password-input {
+  padding: 10px 0;
+  width: 18rem;
+  outline: none;
+  margin-top: 20px;
+}
+
+.login_page .signUp-form .submit-btn {
+  padding: 10px 25px;
+  margin-top: 20px;
+  outline: none;
+  background-color: #eca7a7;
+  border: 1px solid #e0b9b9;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -190,35 +314,39 @@ table {
   color: wheat;
 }
 
+.description-section {
+  background: #336b9e;
+  height: 100vh;
+}
+
 .detail-section {
   margin: 0 auto;
   padding: 30px;
-  -webkit-box-shadow: 2px 1px 3px 1px #FF6666;
-          box-shadow: 2px 1px 3px 1px #FF6666;
 }
 
 .detail-section h1 {
   font-size: 1.2rem;
-  text-transform: uppercase;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-transform: capitalize;
   margin-bottom: 20px;
   font-family: 'Quicksand', sans-serif;
   font-weight: 600;
+  color: white;
 }
 
 .detail-section p {
   font-size: 1.1rem;
   font-family: sans-serif;
-  text-transform: capitalize;
-  letter-spacing: 1px;
-}
-
-.detail-section .fa-home {
-  text-align: right;
+  color: white;
 }
 
 .detail-section .fa-arrow-circle-left {
-  font-size: 20px;
+  font-size: 25px;
+  color: #FF6666;
+}
+
+.detail-section .detail-page {
+  margin: 0 auto;
+  width: 100%;
+  padding: 25PX 0;
 }
 /*# sourceMappingURL=index.css.map */

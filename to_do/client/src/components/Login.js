@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import {connect} from 'react-redux';
 import {login} from '../action/action';
+import {Link} from 'react-router-dom';
 
 class Login extends Component {
   state = {
@@ -16,7 +17,7 @@ class Login extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log('object handleSubmit');
+    // console.log('object handleSubmit');
     this.props.dispatch(
       login(this.state, succeed => {
         if (succeed) {
@@ -47,6 +48,9 @@ class Login extends Component {
               onChange={this.handleChange}
             />
             <input type="submit" className="submit-btn" />
+            <Link to="/signup">
+              <p className="register-user">Registere User</p>
+            </Link>
           </form>
         </div>
       </Fragment>

@@ -171,30 +171,35 @@ table {
 //  =========================
 // 	detail section
 // 	=========================
+.description-section {
+	background: rgb(51, 107, 158);
+	height: 100vh;
+}
 .detail-section{
 	// width:50%;
 	margin:0 auto;
-	// background:#FF6666;
 	padding: 30px;
-	box-shadow: 2px 1px 3px 1px #FF6666;
+	// box-shadow: 2px 1px 3px 1px #FF6666;
 	h1 {
 		font-size: 1.2rem;
-		text-transform: uppercase;
-		text-decoration-line: underline;
+		text-transform: capitalize;
 		margin-bottom: 20px;
 		font-family: 'Quicksand', sans-serif;
 		font-weight: 600;
+		color:white;
 	}
 	p {
 		font-size: 1.1rem;
 		font-family:sans-serif;
-		text-transform: capitalize;
-		letter-spacing:1px;
-	}
-	.fa-home {
-		text-align: right;
+		color: white;
 	}
 	.fa-arrow-circle-left {
-		font-size: 20px;
+		font-size: 25px;
+		color: #FF6666;
+	}
+	.detail-page{
+		margin: 0 auto;
+		width: 100%;
+		padding: 25PX 0 ;
 	}
 }
