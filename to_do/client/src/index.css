@@ -35,6 +35,11 @@
   font-size: 1.7rem;
 }
 
+.top-header .log-out-btn:hover {
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
 .signUp_page {
   margin: 0 auto;
   width: 50%;
@@ -124,6 +129,16 @@
   outline: none;
   background-color: #eca7a7;
   border: 1px solid #e0b9b9;
+}
+
+.login_page .signUp-form .register-user {
+  text-align: right;
+  font-size: 1.1rem;
+}
+
+.login_page .signUp-form .register-user:hover {
+  color: #5c5852;
+  cursor: pointer;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 

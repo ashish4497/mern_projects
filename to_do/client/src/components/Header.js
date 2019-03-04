@@ -31,7 +31,7 @@ class Header extends Component {
           </h1>
           {user._id ? (
             <h1 onClick={this.handleLogout}>
-              <p>Log out</p>
+              <p className="log-out-btn">Log out</p>
             </h1>
           ) : (
             <div className="right-icon">

@@ -29,6 +29,9 @@ router.get('/signup', (req, res) => {
 router.get('/login', (req, res) => {
   res.render('index');
 });
+router.get('/logout', (req, res) => {
+  res.render('index');
+});
 
 //addTodo
 router.post('/api/todo', todoController.addTodo);
