@@ -17,7 +17,7 @@ class App extends Component {
             <Route path="/todos/:id" exact component={TodoDetail} />
             <Route path="/signup" exact component={signUp} />
             <Route path="/login" exact component={Login} />
-            <Route path="/api/logout" exact component={Login} />
+            <Route path="/logout" exact component={Login} />
           </Switch>
         </div>
       </BrowserRouter>

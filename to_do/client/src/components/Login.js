@@ -34,6 +34,7 @@ class Login extends Component {
           <form onSubmit={this.handleSubmit} className="signUp-form">
             <h1>login</h1>
             <input
+              autoComplete="off"
               className="use-name"
               type="text"
               placeholder="Enter  User name"

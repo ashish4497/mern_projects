@@ -40,6 +40,7 @@ class TodoForm extends Component {
           <h1> Add todo list</h1>
           <form className="main-form" onSubmit={this.handleSubmit}>
             <input
+              autoComplete="off"
               type="text"
               className="input-title"
               placeholder="enter title"
@@ -48,6 +49,7 @@ class TodoForm extends Component {
               onChange={this.handleChange}
             />
             <textarea
+              autoComplete="off"
               className="input-description"
               rows="3"
               cols="4"

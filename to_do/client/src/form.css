@@ -87,8 +87,14 @@
   padding: 10px 25px;
   margin-top: 20px;
   outline: none;
+  color: white;
   background-color: #eca7a7;
   border: 1px solid #e0b9b9;
+}
+
+.signUp_page .signUp-form .submit-btn:hover {
+  cursor: pointer;
+  color: #5c5852;
 }
 
 .login_page {
@@ -131,6 +137,12 @@
   outline: none;
   background-color: #eca7a7;
   border: 1px solid #e0b9b9;
+  color: white;
+}
+
+.login_page .signUp-form .submit-btn:hover {
+  color: gray;
+  cursor: pointer;
 }
 
 .login_page .signUp-form .register-user {

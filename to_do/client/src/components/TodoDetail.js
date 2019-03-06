@@ -16,9 +16,6 @@ class TodoDetail extends Component {
       <div className="description-section">
         <Header />
         <div className="detail-section">
-          {/* <Link to="/">
-            <i class="fas fa-home" />
-          </Link> */}
           <Link to="/todos">
             <i className="fas fa-arrow-circle-left" />
           </Link>

@@ -23,12 +23,15 @@ router.get('/todos', isLoginIn, (req, res) => {
 router.get('/todos/:id', isLoginIn, (req, res) => {
   res.render('index');
 });
+
 router.get('/signup', (req, res) => {
   res.render('index');
 });
+
 router.get('/login', (req, res) => {
   res.render('index');
 });
+
 router.get('/logout', (req, res) => {
   res.render('index');
 });

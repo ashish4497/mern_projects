@@ -2,6 +2,7 @@ import React, {Component, Fragment} from 'react';
 import {connect} from 'react-redux';
 import {getUserData, logoutUser} from '../action/action';
 import {Link} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 
 class Header extends Component {
   componentDidMount() {
@@ -9,11 +10,14 @@ class Header extends Component {
   }
 
   handleLogout = e => {
+    console.log(this, 'display in header-section');
     e.preventDefault();
     this.props.dispatch(
       logoutUser(success => {
+        const {history} = this.props;
         if (success) {
-          this.props.history.push('/login');
+          console.log(this.props, 'header section');
+          history.push('/login');
         }
       })
     );
@@ -54,5 +58,4 @@ const mapStateToProps = state => {
     user: state.user
   };
 };
-
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps)(withRouter(Header));

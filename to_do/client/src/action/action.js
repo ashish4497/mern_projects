@@ -53,7 +53,7 @@ export function deleteTodo(id) {
   };
 }
 
-export function userSignup(data) {
+export function userSignup(data, cb) {
   return function(dispatch) {
     fetch(`${url}/signup`, {
       method: 'POST',
@@ -64,8 +64,10 @@ export function userSignup(data) {
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data);
+        // console.log(data);
+
         dispatch({type: 'SIGNUP_SUCCESS', data});
+        cb(true);
       });
   };
 }
@@ -80,7 +82,7 @@ export const login = (data, cb) => dispatch => {
   })
     .then(res => res.json())
     .then(data => {
-      console.log(data, 'inside action login');
+      // console.log(data, 'inside action login');
       dispatch({type: 'LOGIN_SUCCESS', data});
       cb(true);
     });

@@ -14,7 +14,13 @@ class SignUp extends Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-    this.props.dispatch(userSignup(this.state));
+    this.props.dispatch(
+      userSignup(this.state, success => {
+        if (success) {
+          this.props.history.push('/login');
+        }
+      })
+    );
   };
 
   render() {
@@ -24,6 +30,7 @@ class SignUp extends Component {
           <form onSubmit={this.handleSubmit} className="signUp-form">
             <h1>signUp</h1>
             <input
+              autoComplete="off"
               className="use-name"
               type="text"
               placeholder="Enter user name"
@@ -31,6 +38,7 @@ class SignUp extends Component {
               onChange={this.handleChange}
             />
             <input
+              autoComplete="off"
               className="email-input"
               type="email"
               placeholder="Enter Email"

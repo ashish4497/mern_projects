@@ -45,6 +45,7 @@ module.exports = {
           const newUser = new User(req.body);
           newUser.save((err, user) => {
             if (err) throw err;
+            res.json(user);
           });
         }
       }
@@ -75,9 +76,12 @@ module.exports = {
   },
   logout: (req, res) => {
     req.session.destroy();
-    return res.status(200).json({
-      msg: 'success'
-    });
+    return (
+      res.status(200).json({
+        msg: 'success'
+      }),
+      res.render('index')
+    );
   },
   isLoggedIn: (req, res) => {
     User.findOne({_id: req.user}, (err, user) => {

@@ -73,8 +73,13 @@
     padding: 10px 25px;
     margin-top: 20px;
     outline: none;
+    color: white;
     background-color: rgb(236, 167, 167);
     border: 1px solid rgb(224, 185, 185); 
+    &:hover {
+      cursor: pointer;
+      color:rgb(92, 88, 82);
+    }
    }
 }
 }
@@ -112,7 +117,12 @@
      margin-top: 20px;
      outline: none;
      background-color: rgb(236, 167, 167);
-     border: 1px solid rgb(224, 185, 185); 
+     border: 1px solid rgb(224, 185, 185);
+     color: white;
+     &:hover {
+       color: gray;
+       cursor: pointer;
+     } 
     }
     .register-user {
       text-align: right;
